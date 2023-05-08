@@ -201,6 +201,17 @@ public class TestRadio {
     }
 
     @Test
+    public void prevStationFullTest109() {
+        Radio station = new Radio();
+        station.setCurrentStation(10);
+
+        station.prev();
+        int expected = 9;
+        int actual = station.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void volumeUpFullTest() {
         Radio volume = new Radio();
         volume.setCurrentVolume(20);
