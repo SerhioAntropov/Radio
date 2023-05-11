@@ -283,4 +283,33 @@ public class TestRadio {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    void ShouldSetRadioStationMaxCount() {
+        Radio radio = new Radio(10);
+
+
+        radio.setCurrentStation(9);
+        Assertions.assertEquals(9, radio.getCurrentStation());
+    }
+
+    @Test
+    void ShouldSetRadioStationMaxCount9() {
+        Radio radio = new Radio(99);
+
+
+        radio.setCurrentStation(58);
+        Assertions.assertEquals(58, radio.getCurrentStation());
+    }
+
+    @Test
+    void ShouldSetRadioStationMaxCount1() {
+        Radio radio = new Radio(1);
+
+
+        radio.setCurrentStation(0);
+        Assertions.assertEquals(0, radio.getCurrentStation());
+    }
+
+
+
 }
